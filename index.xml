@@ -1,25 +1,24 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Lectures &amp; Talks</title>
-    <link>https://valorcz.github.io/index.xml</link>
-    <description>Recent content on Lectures &amp; Talks</description>
+    <title>Introduction on Unsorted Stuff</title>
+    <link>https://valorcz.github.io/</link>
+    <description>Recent content in Introduction on Unsorted Stuff</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-EN</language>
-    <managingEditor>vaclav.lorenc@gmail.com (Vašek Lorenc)</managingEditor>
-    <webMaster>vaclav.lorenc@gmail.com (Vašek Lorenc)</webMaster>
-    <copyright>(c) 2016.vašek.lorenc</copyright>
-    <lastBuildDate>Tue, 18 Oct 2016 17:47:33 +0200</lastBuildDate>
-    <atom:link href="https://valorcz.github.io/index.xml" rel="self" type="application/rss+xml" />
+    
+	<atom:link href="https://valorcz.github.io/index.xml" rel="self" type="application/rss+xml" />
+    
     
     <item>
-      <title>good to great</title>
-      <link>https://valorcz.github.io/2016/10/18/good-to-great/</link>
-      <pubDate>Tue, 18 Oct 2016 17:47:33 +0200</pubDate>
-      <author>vaclav.lorenc@gmail.com (Vašek Lorenc)</author>
-      <guid>https://valorcz.github.io/2016/10/18/good-to-great/</guid>
-      <description>&lt;p&gt;I read &lt;strong&gt;Good to Great in January 2016&lt;/strong&gt;. An awesome read sharing detailed analysis on how good companies became great.&lt;/p&gt;
-</description>
+      <title>2020-January-Newsletter</title>
+      <link>https://valorcz.github.io/docs/newsletters/2020-01-newsletter/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://valorcz.github.io/docs/newsletters/2020-01-newsletter/</guid>
+      <description>“I didn’t have time to write a short letter, so I wrote a long one instead.”
+― Mark Twain
+ Good news, everyone! A new issue of my very irregular (not-so-much-about-security-now) newsletter is out!
+My original idea of publishing this every quarter (or so) was clearly too optimistic, as you can see. Which leads to a huge problem &amp;ndash; there&amp;rsquo;s a load of links and texts I&amp;rsquo;d like to share with you, and the length of the text could be demotivating, I know.</description>
     </item>
     
   </channel>

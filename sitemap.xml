@@ -1,14 +1,33 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://valorcz.github.io/</loc>
-    <lastmod>2016-10-18T17:47:33+02:00</lastmod>
+    <loc>https://valorcz.github.io/docs/newsletters/2020-01-newsletter/</loc>
   </url>
   
   <url>
-    <loc>https://valorcz.github.io/2016/10/18/good-to-great/</loc>
-    <lastmod>2016-10-18T17:47:33+02:00</lastmod>
+    <loc>https://valorcz.github.io/posts/</loc>
+  </url>
+  
+  <url>
+    <loc>https://valorcz.github.io/categories/</loc>
+  </url>
+  
+  <url>
+    <loc>https://valorcz.github.io/docs/</loc>
+  </url>
+  
+  <url>
+    <loc>https://valorcz.github.io/</loc>
+  </url>
+  
+  <url>
+    <loc>https://valorcz.github.io/docs/newsletters/</loc>
+  </url>
+  
+  <url>
+    <loc>https://valorcz.github.io/tags/</loc>
   </url>
   
 </urlset>
