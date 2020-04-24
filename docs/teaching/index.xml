@@ -1,3 +1,24 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Teaching materials on Unsorted Stuff</title><link>https://valorcz.github.io/docs/teaching/</link><description>Recent content in Teaching materials on Unsorted Stuff</description><generator>Hugo -- gohugo.io</generator><atom:link href="https://valorcz.github.io/docs/teaching/index.xml" rel="self" type="application/rss+xml"/><item><title/><link>https://valorcz.github.io/docs/teaching/memory-analysis/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://valorcz.github.io/docs/teaching/memory-analysis/</guid><description>In-Memory Malware Analysis This page contains some information and links for In-Memory Malware Analysis course.
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Teaching materials on Unsorted Stuff</title>
+    <link>https://valorcz.github.io/docs/teaching/</link>
+    <description>Recent content in Teaching materials on Unsorted Stuff</description>
+    <generator>Hugo -- gohugo.io</generator>
+    
+	<atom:link href="https://valorcz.github.io/docs/teaching/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title></title>
+      <link>https://valorcz.github.io/docs/teaching/memory-analysis/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://valorcz.github.io/docs/teaching/memory-analysis/</guid>
+      <description>In-Memory Malware Analysis This page contains some information and links for In-Memory Malware Analysis course.
 In case of any questions, don&amp;rsquo;t hesitate to contact me at vaclav.lorenc-at-gmail.com or @valorcz on Twitter.
-Course Texts In-Memory Analysis (text) &amp;mdash; A brief introduction to reverse engineering and memory forensics (English). In-Memory Analysis (slides) &amp;mdash; Handouts for this course (English). Tools and Templates In-Memory Analysis (tools) &amp;mdash; A bootstrap folder structure with Volatility Framework and other tools.</description></item></channel></rss>
+Course Texts  In-Memory Analysis (text) &amp;mdash; A brief introduction to reverse engineering and memory forensics (English). In-Memory Analysis (slides) &amp;mdash; Handouts for this course (English).  Tools and Templates  In-Memory Analysis (tools) &amp;mdash; A bootstrap folder structure with Volatility Framework and other tools.</description>
+    </item>
+    
+  </channel>
+</rss>
