@@ -1,65 +1,8 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Introduction on Unsorted Stuff</title>
-    <link>https://valorcz.github.io/</link>
-    <description>Recent content in Introduction on Unsorted Stuff</description>
-    <generator>Hugo -- gohugo.io</generator>
-    
-	<atom:link href="https://valorcz.github.io/index.xml" rel="self" type="application/rss+xml" />
-    
-    
-    <item>
-      <title></title>
-      <link>https://valorcz.github.io/docs/projects/secure-home-net/brainstorming/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://valorcz.github.io/docs/projects/secure-home-net/brainstorming/</guid>
-      <description>Secure Home Network Subnet Definitions Let&amp;rsquo;s start with some subnets definitions:
- VPN subnet  For indidivual users B2B (or rather Home-2-Home) networks will use individual subnets.   WiFi  Guest Kids Main   Docker/VMs  For any kind of VMs, Kubernetes, etc.   Infrastruktura  Switches, routers, APs, management interfaces of NAS, anything else fitting this category (e.g. Docker mgmt) LDAP, Kerberos, Keycloak   Home network  Most likely the same thing as the Main Wi-Fi network.</description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>https://valorcz.github.io/docs/projects/secure-home-net/resources/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://valorcz.github.io/docs/projects/secure-home-net/resources/</guid>
-      <description>Interesting Resources    URL Description     HomelabOS Basically a personal datacenter, which is a huge part of what I&amp;rsquo;d like to put together.    </description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>https://valorcz.github.io/docs/teaching/memory-analysis/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://valorcz.github.io/docs/teaching/memory-analysis/</guid>
-      <description>In-Memory Malware Analysis This page contains some information and links for In-Memory Malware Analysis course.
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Introduction on Unsorted Stuff</title><link>https://valorcz.github.io/</link><description>Recent content in Introduction on Unsorted Stuff</description><generator>Hugo -- gohugo.io</generator><atom:link href="https://valorcz.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title/><link>https://valorcz.github.io/docs/projects/secure-home-net/brainstorming/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://valorcz.github.io/docs/projects/secure-home-net/brainstorming/</guid><description>Secure Home Network Subnet Definitions Let&amp;rsquo;s start with some subnets definitions:
+VPN subnet For indidivual users B2B (or rather Home-2-Home) networks will use individual subnets. WiFi Guest Kids Main Docker/VMs For any kind of VMs, Kubernetes, etc. Infrastruktura Switches, routers, APs, management interfaces of NAS, anything else fitting this category (e.g. Docker mgmt) LDAP, Kerberos, Keycloak Home network Most likely the same thing as the Main Wi-Fi network.</description></item><item><title/><link>https://valorcz.github.io/docs/projects/secure-home-net/resources/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://valorcz.github.io/docs/projects/secure-home-net/resources/</guid><description>Interesting Resources URL Description HomelabOS Basically a personal datacenter, which is a huge part of what I&amp;rsquo;d like to put together.</description></item><item><title/><link>https://valorcz.github.io/docs/teaching/memory-analysis/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://valorcz.github.io/docs/teaching/memory-analysis/</guid><description>In-Memory Malware Analysis This page contains some information and links for In-Memory Malware Analysis course.
 In case of any questions, don&amp;rsquo;t hesitate to contact me at vaclav.lorenc-at-gmail.com or @valorcz on Twitter.
-Course Texts  In-Memory Analysis (text) &amp;mdash; A brief introduction to reverse engineering and memory forensics (English). In-Memory Analysis (slides) &amp;mdash; Handouts for this course (English).  Tools and Templates  In-Memory Analysis (tools) &amp;mdash; A bootstrap folder structure with Volatility Framework and other tools.</description>
-    </item>
-    
-    <item>
-      <title>2018-November</title>
-      <link>https://valorcz.github.io/docs/newsletters/2018-newsletter/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://valorcz.github.io/docs/newsletters/2018-newsletter/</guid>
-      <description>Long time, no see… It’s been a while since I shared any news from the outer world. Doesn’t necessarily mean I stopped reading or caring about the world or you, it just was a difficult year for me. But it’s time to restart this activity, hopefully with more feedback this time! :)
-Before we really start, I’d like to thank Shawn McGhee and Marek Kumpost for their suggestions, corrections and help with this.</description>
-    </item>
-    
-    <item>
-      <title>2020-January</title>
-      <link>https://valorcz.github.io/docs/newsletters/2020-01-newsletter/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://valorcz.github.io/docs/newsletters/2020-01-newsletter/</guid>
-      <description>A Very Long Good Bye  “I didn’t have time to write a short letter, so I wrote a long one instead.”
+Course Texts In-Memory Analysis (text) &amp;mdash; A brief introduction to reverse engineering and memory forensics (English). In-Memory Analysis (slides) &amp;mdash; Handouts for this course (English). Tools and Templates In-Memory Analysis (tools) &amp;mdash; A bootstrap folder structure with Volatility Framework and other tools.</description></item><item><title>2018-November</title><link>https://valorcz.github.io/docs/newsletters/2018-newsletter/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://valorcz.github.io/docs/newsletters/2018-newsletter/</guid><description>Long time, no see… It’s been a while since I shared any news from the outer world. Doesn’t necessarily mean I stopped reading or caring about the world or you, it just was a difficult year for me. But it’s time to restart this activity, hopefully with more feedback this time! :)
+Before we really start, I’d like to thank Shawn McGhee and Marek Kumpost for their suggestions, corrections and help with this.</description></item><item><title>2020-January</title><link>https://valorcz.github.io/docs/newsletters/2020-01-newsletter/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://valorcz.github.io/docs/newsletters/2020-01-newsletter/</guid><description>A Very Long Good Bye “I didn’t have time to write a short letter, so I wrote a long one instead.”
 ― Mark Twain
- Good news, everyone! A new issue of my very irregular (not-so-much-about-security-now) newsletter is out!
-My original idea of publishing this every quarter (or so) was clearly too optimistic, as you can see. Which leads to a huge problem &amp;ndash; there&amp;rsquo;s a load of links and texts I&amp;rsquo;d like to share with you, and the length of the text could be demotivating, I know.</description>
-    </item>
-    
-  </channel>
-</rss>
+Good news, everyone! A new issue of my very irregular (not-so-much-about-security-now) newsletter is out!
+My original idea of publishing this every quarter (or so) was clearly too optimistic, as you can see. Which leads to a huge problem &amp;ndash; there&amp;rsquo;s a load of links and texts I&amp;rsquo;d like to share with you, and the length of the text could be demotivating, I know.</description></item></channel></rss>
