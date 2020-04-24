@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Secure Home Network Project on Unsorted Stuff</title>
+    <link>https://valorcz.github.io/docs/projects/secure-home-net/</link>
+    <description>Recent content in Secure Home Network Project on Unsorted Stuff</description>
+    <generator>Hugo -- gohugo.io</generator>
+    
+	<atom:link href="https://valorcz.github.io/docs/projects/secure-home-net/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title></title>
+      <link>https://valorcz.github.io/docs/projects/secure-home-net/brainstorming/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://valorcz.github.io/docs/projects/secure-home-net/brainstorming/</guid>
+      <description>Secure Home Network Subnet Definitions Let&amp;rsquo;s start with some subnets definitions:
+ VPN subnet  For indidivual users B2B (or rather Home-2-Home) networks will use individual subnets.   WiFi  Guest Kids Main   Docker/VMs  For any kind of VMs, Kubernetes, etc.   Infrastruktura  Switches, routers, APs, management interfaces of NAS, anything else fitting this category (e.g. Docker mgmt) LDAP, Kerberos, Keycloak   Home network  Most likely the same thing as the Main Wi-Fi network.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://valorcz.github.io/docs/projects/secure-home-net/resources/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://valorcz.github.io/docs/projects/secure-home-net/resources/</guid>
+      <description>Interesting Resources    URL Description     HomelabOS Basically a personal datacenter, which is a huge part of what I&amp;rsquo;d like to put together.    </description>
+    </item>
+    
+  </channel>
+</rss>
