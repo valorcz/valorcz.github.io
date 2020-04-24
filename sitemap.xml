@@ -3,7 +3,15 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://valorcz.github.io/docs/teaching/</loc>
+    <loc>https://valorcz.github.io/docs/projects/</loc>
+  </url>
+  
+  <url>
+    <loc>https://valorcz.github.io/docs/projects/secure-home-net/brainstorming/</loc>
+  </url>
+  
+  <url>
+    <loc>https://valorcz.github.io/docs/projects/secure-home-net/resources/</loc>
   </url>
   
   <url>
@@ -16,6 +24,10 @@
   
   <url>
     <loc>https://valorcz.github.io/docs/newsletters/2020-01-newsletter/</loc>
+  </url>
+  
+  <url>
+    <loc>https://valorcz.github.io/tags/architecture/</loc>
   </url>
   
   <url>
@@ -39,7 +51,15 @@
   </url>
   
   <url>
+    <loc>https://valorcz.github.io/docs/projects/secure-home-net/</loc>
+  </url>
+  
+  <url>
     <loc>https://valorcz.github.io/tags/</loc>
+  </url>
+  
+  <url>
+    <loc>https://valorcz.github.io/docs/teaching/</loc>
   </url>
   
 </urlset>

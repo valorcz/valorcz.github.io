@@ -11,6 +11,25 @@
     
     <item>
       <title></title>
+      <link>https://valorcz.github.io/docs/projects/secure-home-net/brainstorming/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://valorcz.github.io/docs/projects/secure-home-net/brainstorming/</guid>
+      <description>Secure Home Network Subnet Definitions Let&amp;rsquo;s start with some subnets definitions:
+ VPN subnet  For indidivual users B2B (or rather Home-2-Home) networks will use individual subnets.   WiFi  Guest Kids Main   Docker/VMs  For any kind of VMs, Kubernetes, etc.   Infrastruktura  Switches, routers, APs, management interfaces of NAS, anything else fitting this category (e.g. Docker mgmt) LDAP, Kerberos, Keycloak   Home network  Most likely the same thing as the Main Wi-Fi network.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://valorcz.github.io/docs/projects/secure-home-net/resources/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://valorcz.github.io/docs/projects/secure-home-net/resources/</guid>
+      <description>Interesting Resources    URL Description     HomelabOS Basically a personal datacenter, which is a huge part of what I&amp;rsquo;d like to put together.    </description>
+    </item>
+    
+    <item>
+      <title></title>
       <link>https://valorcz.github.io/docs/teaching/memory-analysis/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
@@ -36,7 +55,7 @@ Before we really start, I’d like to thank Shawn McGhee and Marek Kumpost for t
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://valorcz.github.io/docs/newsletters/2020-01-newsletter/</guid>
-      <description>“I didn’t have time to write a short letter, so I wrote a long one instead.”
+      <description>A Very Long Good Bye  “I didn’t have time to write a short letter, so I wrote a long one instead.”
 ― Mark Twain
  Good news, everyone! A new issue of my very irregular (not-so-much-about-security-now) newsletter is out!
 My original idea of publishing this every quarter (or so) was clearly too optimistic, as you can see. Which leads to a huge problem &amp;ndash; there&amp;rsquo;s a load of links and texts I&amp;rsquo;d like to share with you, and the length of the text could be demotivating, I know.</description>
