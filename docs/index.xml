@@ -9,5 +9,17 @@
 	<atom:link href="https://valorcz.github.io/docs/index.xml" rel="self" type="application/rss+xml" />
     
     
+    <item>
+      <title></title>
+      <link>https://valorcz.github.io/docs/teaching/memory-analysis/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://valorcz.github.io/docs/teaching/memory-analysis/</guid>
+      <description>In-Memory Malware Analysis This page contains some information and links for In-Memory Malware Analysis course.
+In case of any questions, don&amp;rsquo;t hesitate to contact me at vaclav.lorenc-at-gmail.com or @valorcz on Twitter.
+Course Texts | In-Memory Analysis (text) | A brief introduction to reverse engineering and memory forensics (English). | | In-Memory Analysis (slides) | Handouts for this course (English). |
+Tools and Templates | In-Memory Analysis (tools) | A bootstrap folder structure with Volatility Framework and other tools.</description>
+    </item>
+    
   </channel>
 </rss>
