@@ -17,12 +17,11 @@
       <guid>https://valorcz.github.io/docs/teaching/memory-analysis/</guid>
       <description>In-Memory Malware Analysis This page contains some information and links for In-Memory Malware Analysis course.
 In case of any questions, don&amp;rsquo;t hesitate to contact me at vaclav.lorenc-at-gmail.com or @valorcz on Twitter.
-Course Texts | In-Memory Analysis (text) | A brief introduction to reverse engineering and memory forensics (English). | | In-Memory Analysis (slides) | Handouts for this course (English). |
-Tools and Templates | In-Memory Analysis (tools) | A bootstrap folder structure with Volatility Framework and other tools.</description>
+Course Texts  In-Memory Analysis (text) &amp;mdash; A brief introduction to reverse engineering and memory forensics (English). In-Memory Analysis (slides) &amp;mdash; Handouts for this course (English).  Tools and Templates  In-Memory Analysis (tools) &amp;mdash; A bootstrap folder structure with Volatility Framework and other tools.</description>
     </item>
     
     <item>
-      <title>2018-November-Newsletter</title>
+      <title>2018-November</title>
       <link>https://valorcz.github.io/docs/newsletters/2018-newsletter/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
@@ -32,7 +31,7 @@ Before we really start, I’d like to thank Shawn McGhee and Marek Kumpost for t
     </item>
     
     <item>
-      <title>2020-January-Newsletter</title>
+      <title>2020-January</title>
       <link>https://valorcz.github.io/docs/newsletters/2020-01-newsletter/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
