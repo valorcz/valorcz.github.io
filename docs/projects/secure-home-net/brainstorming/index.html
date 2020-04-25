@@ -14,7 +14,7 @@
 <title>Brainstorming | Unsorted Stuff</title>
 <link rel="icon" href="/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="/book.min.d2f9c90a63827e536eebd87a9319796e5963a01a276775659c50295dff85bed4.css" integrity="sha256-0vnJCmOCflNu69h6kxl5blljoBonZ3VlnFApXf&#43;FvtQ=">
-<script defer src="/en.search.min.db3bb3f9394d3cabd6e8f081c439c55b14cb2c7253113b88353bf22379c74378.js" integrity="sha256-2zuz&#43;TlNPKvW6PCBxDnFWxTLLHJTETuINTvyI3nHQ3g="></script>
+<script defer src="/en.search.min.2e9c1893976f50a8d5d0db3d8bf82658f944b4b48b1ba724b359524fc234324f.js" integrity="sha256-LpwYk5dvUKjV0Ns9i/gmWPlEtLSLG6cks1lST8I0Mk8="></script>
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
@@ -323,14 +323,23 @@ https://github.com/alex-shpak/hugo-book
 <p>Just a list of things</p>
 <ul>
 <li>NTP</li>
-<li>DNS
-<ul>
-<li>DNSoverHTTPS support would be cool</li>
-</ul>
-</li>
 <li>FreeIPA
 <ul>
 <li>de-facto standard for LDAP &amp; Kerberos</li>
+</ul>
+</li>
+<li>DHCP
+<ul>
+<li>Can be integrated with FreeIPA</li>
+<li><a href="https://www.freeipa.org/page/DHCP_Integration_Design">FreeIPA DHCP Integration Design</a></li>
+</ul>
+</li>
+<li>DNS
+<ul>
+<li>dns-over-https support would be cool</li>
+<li>pi-hole integration (filter out all the ads and nastyness)</li>
+<li>Cloudflare DNS servers could be used as well (for both IPv4 and IPv6)</li>
+<li>Needs to be integrated with FreeIPA</li>
 </ul>
 </li>
 <li>Keycloak
@@ -338,7 +347,12 @@ https://github.com/alex-shpak/hugo-book
 <li>SSO, social network accounts &amp; registration, &hellip;</li>
 </ul>
 </li>
-<li>Docker (or any better kind of conteiners support)</li>
+<li>Docker (or any better kind of conteiners support)
+<ul>
+<li>Or <code>podman</code> perhaps, as it&rsquo;s more supported by RedHat/CentOS</li>
+<li>See <a href="https://thenewstack.io/check-out-podman-red-hats-daemon-less-docker-alternative/">https://thenewstack.io/check-out-podman-red-hats-daemon-less-docker-alternative/</a> for more information</li>
+</ul>
+</li>
 <li>SMTP
 <ul>
 <li>What&rsquo;s the recommended SMTP server these days?</li>
@@ -352,6 +366,7 @@ https://github.com/alex-shpak/hugo-book
 <li>Proper bastion- (jump-) server
 <ul>
 <li>So that all the management accesses are properly routed through a single place</li>
+<li>SSH Stepstone</li>
 </ul>
 </li>
 <li>nginx &amp; haproxy
@@ -380,6 +395,7 @@ https://github.com/alex-shpak/hugo-book
 <li>Network IDS
 <ul>
 <li>Suricata/Bro</li>
+<li><strong>Question</strong>: routing vs mirroring on switches? Both possible, different purposes</li>
 </ul>
 </li>
 <li>Anything from the HomelabOS project
@@ -395,7 +411,6 @@ https://github.com/alex-shpak/hugo-book
   proxmox -- VM hypervisor 
   pi-hole
   octopi
-  SSH stepstone
   diskstation,ds
   TV
   NIDSSensor
