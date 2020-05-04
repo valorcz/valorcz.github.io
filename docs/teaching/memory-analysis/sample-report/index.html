@@ -1,0 +1,792 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="PV204: Sample Analysis Report This is a sample report describing analysis of xp-infected.vmem memory image (i.e. exercise01). We&rsquo;ll demonstrate both the structure of the report and one of the possible analysis workflows you could use for your own research/work.
+Sample Preparation Before we start with the analysis, we need to download the memory image. That can be done via exercise 1 command issued on the VM command line (see the official course documentation for more details)."><meta property="og:title" content="" />
+<meta property="og:description" content="PV204: Sample Analysis Report This is a sample report describing analysis of xp-infected.vmem memory image (i.e. exercise01). We&rsquo;ll demonstrate both the structure of the report and one of the possible analysis workflows you could use for your own research/work.
+Sample Preparation Before we start with the analysis, we need to download the memory image. That can be done via exercise 1 command issued on the VM command line (see the official course documentation for more details)." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://valorcz.github.io/docs/teaching/memory-analysis/sample-report/" />
+
+<title>Sample Report | Unsorted Stuff</title>
+<link rel="icon" href="/favicon.png" type="image/x-icon">
+<link rel="stylesheet" href="/book.min.be9c64dfc170c5ab2d6e37cc61c7c7f89d76767b67d3e59763a40b1f21bdc530.css" integrity="sha256-vpxk38FwxastbjfMYcfH&#43;J12dntn0&#43;WXY6QLHyG9xTA=">
+<script defer src="/en.search.min.cc14dcd3d512f034b7bd9f8af51386375275a8bc2b5dc4743eef14b76ec0b72a.js" integrity="sha256-zBTc09US8DS3vZ&#43;K9ROGN1J1qLwrXcR0Pu8Ut27Atyo="></script>
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+
+  
+
+</head>
+
+<body>
+  <input type="checkbox" class="hidden" id="menu-control" />
+  <main class="container flex">
+    <aside class="book-menu">
+      
+  <nav>
+<h2 class="book-brand">
+  <a href="/"><span>Unsorted Stuff</span>
+  </a>
+</h2>
+
+
+<div class="book-search">
+  <input type="text" id="book-search-input" placeholder="Search" aria-label="Search" maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  
+  
+  
+
+  
+  <ul>
+    
+      
+        <li>
+          
+  
+    <span>Projects</span>
+  
+
+          
+  
+  
+  
+
+  
+  <ul>
+    
+      
+        <li>
+          
+  
+    <a href="/docs/projects/secure-home-net/" class="">Secure Home Network Project</a>
+  
+
+          
+  
+  
+  
+
+  
+  <ul>
+    
+      
+        <li>
+          
+  
+    <a href="/docs/projects/secure-home-net/brainstorming/" class="">Brainstorming</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+    <a href="/docs/projects/secure-home-net/resources/" class="">Resources</a>
+  
+
+        </li>
+      
+    
+  </ul>
+  
+
+        </li>
+      
+    
+  </ul>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+    <span>Irregular Security Newsletters</span>
+  
+
+          
+  
+  
+  
+
+  
+  <ul>
+    
+      
+        <li>
+          
+  
+    <a href="/docs/newsletters/2018-newsletter/" class="">2018-November</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+    <a href="/docs/newsletters/2020-01-newsletter/" class="">2020-January</a>
+  
+
+        </li>
+      
+    
+  </ul>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+    <a href="/docs/teaching/" class="">Teaching materials</a>
+  
+
+          
+  
+  
+  
+
+  
+  <ul>
+    
+      
+        <li>
+          
+  
+    <span>Memory Analysis</span>
+  
+
+          
+  
+  
+  
+
+  
+  <ul>
+    
+      
+        <li>
+          
+  
+    <a href="/docs/teaching/memory-analysis/materials/" class="">Materials</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+    <a href="/docs/teaching/memory-analysis/sample-report/" class="active">Sample Report</a>
+  
+
+        </li>
+      
+    
+  </ul>
+  
+
+        </li>
+      
+    
+  </ul>
+  
+
+        </li>
+      
+    
+  </ul>
+  
+
+
+
+
+
+
+
+
+
+
+
+  
+<ul>
+  
+  <li>
+    <a href="/posts/" >
+        Blog
+      </a>
+  </li>
+  
+</ul>
+
+
+
+
+
+
+</nav>
+
+
+
+
+  <script>(function(){var menu=document.querySelector("aside.book-menu nav");addEventListener("beforeunload",function(event){localStorage.setItem("menu.scrollTop",menu.scrollTop);});menu.scrollTop=localStorage.getItem("menu.scrollTop");})();</script>
+
+
+ 
+    </aside>
+
+    <div class="book-page">
+      <header class="book-header">
+        
+  <div class="flex align-center justify-between">
+  <label for="menu-control">
+    <img src="/svg/menu.svg" class="book-icon" alt="Menu" />
+  </label>
+
+  <strong>Sample Report</strong>
+
+  <label for="toc-control">
+    <img src="/svg/toc.svg" class="book-icon" alt="Table of Contents" />
+  </label>
+</div>
+
+
+  
+    <input type="checkbox" class="hidden" id="toc-control" />
+    <aside class="hidden clearfix">
+      
+  <nav id="TableOfContents">
+  <ul>
+    <li><a href="#sample-preparation">Sample Preparation</a></li>
+    <li><a href="#image-identification">Image Identification</a>
+      <ul>
+        <li><a href="#image-summary">Image Summary</a></li>
+      </ul>
+    </li>
+    <li><a href="#processes">Processes</a>
+      <ul>
+        <li><a href="#brief-processes-summary">Brief Processes Summary</a></li>
+      </ul>
+    </li>
+    <li><a href="#network-communication">Network Communication</a>
+      <ul>
+        <li><a href="#whois-lookup">WHOIS Lookup</a></li>
+        <li><a href="#dns-cache">DNS Cache</a></li>
+        <li><a href="#brief-network-summary">Brief Network Summary</a></li>
+      </ul>
+    </li>
+    <li><a href="#files-analysis">Files Analysis</a></li>
+    <li><a href="#forensic-analysis">Forensic Analysis</a>
+      <ul>
+        <li><a href="#prefetch-files">Prefetch Files</a></li>
+        <li><a href="#strings-analysis">Strings Analysis</a></li>
+      </ul>
+    </li>
+    <li><a href="#final-hypothesis">Final Hypothesis</a>
+      <ul>
+        <li><a href="#timeline">Timeline</a></li>
+        <li><a href="#indicators">Indicators</a></li>
+        <li><a href="#signatures">Signatures</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+
+    </aside>
+  
+ 
+      </header>
+
+      
+      
+  <article class="markdown"><h1 id="pv204-sample-analysis-report">PV204: Sample Analysis Report</h1>
+<p>This is a sample report describing analysis of <code>xp-infected.vmem</code> memory image
+(i.e. <code>exercise01</code>). We&rsquo;ll demonstrate both the structure of the report and one
+of the possible analysis workflows you could use for your own research/work.</p>
+<h2 id="sample-preparation">Sample Preparation</h2>
+<p>Before we start with the analysis, we need to download the memory image. That
+can be done via <code>exercise 1</code> command issued on the VM command line (see
+<a href="https://github.com/valorcz/vagrant-memory-analysis/blob/master/README.md">the official course documentation</a> for more details).</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">~$ exercise <span style="color:#ae81ff">1</span>
+Downloading exercise01 image: xp-infected.vmem...
+<span style="color:#75715e">######################################################################## 100.0%</span>
+Extracting the image...
+  /home/vagrant/images/exercise01/xp-infected.vmem.bz2: <span style="color:#66d9ef">done</span>
+</code></pre></div><h2 id="image-identification">Image Identification</h2>
+<p>Every memory analysis should start with proper identification of the provided
+memory image.</p>
+<p>Let&rsquo;s do it:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">exercise01$ vol -f xp-infected imageinfo
+</code></pre></div><p>Which results in:</p>
+<pre><code>          Suggested Profile(s) : WinXPSP2x86, WinXPSP3x86 (Instantiated with WinXPSP2x86)
+                     AS Layer1 : IA32PagedMemoryPae (Kernel AS)
+                     AS Layer2 : FileAddressSpace (/home/vagrant/images/exercise01/xp-infected.vmem)
+                      PAE type : PAE
+                           DTB : 0x2b0000L
+                          KDBG : 0x80545ae0L
+          Number of Processors : 1
+     Image Type (Service Pack) : 3
+                KPCR for CPU 0 : 0xffdff000L
+             KUSER_SHARED_DATA : 0xffdf0000L
+           Image date and time : 2011-04-10 21:29:25 UTC+0000
+     Image local date and time : 2011-04-10 14:29:25 -0700
+</code></pre><p>We&rsquo;ll be dealing with WinXP image, Service Pack 3, running on <code>x86</code> platform.</p>
+<h3 id="image-summary">Image Summary</h3>
+<table>
+<thead>
+<tr>
+<th>Information</th>
+<th>Value</th>
+<th>Comment</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Filename</td>
+<td><code>xp-infected.vmem</code></td>
+<td>n/a</td>
+</tr>
+<tr>
+<td>MD5</td>
+<td><code>927ce822c7f2c1cf3265c1d5b03281a4</code></td>
+<td>MD5 sum of the provided image</td>
+</tr>
+<tr>
+<td>SHA1</td>
+<td><code>89998cc2704436a8842cd224e3c34e02907c7cd7</code></td>
+<td>SHA1 sum of the provided image</td>
+</tr>
+<tr>
+<td>OS</td>
+<td>Windows XP, Service Pack 3</td>
+<td>Image was created on <code>2011-04-10 21:29:25 UTC</code></td>
+</tr>
+<tr>
+<td>Image Timezone</td>
+<td><code>-0700</code></td>
+<td>This could be a PDT/PST or anything US west-coast. Not that important for Windows OS though, as it uses UTC internally everywhere. Very wise!</td>
+</tr>
+</tbody>
+</table>
+<h2 id="processes">Processes</h2>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">exercise01$ vol -f xp-infected.vmem pslist
+</code></pre></div><p>returns a list of processes, which some could be raising concerns &ndash; especially
+<code>cmd.exe</code> and <code>wind32dd.exe</code>.</p>
+<pre><code>0x022d3c10 cmd.exe                 972 True   True   True     True   True  True    True
+0x0216d228 win32dd.exe            1120 True   True   True     True   True  True    True
+</code></pre><p>Before we proceed with further steps though, we can review other Volatility
+commands outputs to either gain more confidence in our hypothesis, or correct
+it if needed.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">exercise01$ vol -f xp-infected.vmem psxview
+</code></pre></div><p>doesn&rsquo;t reveal anything new or suspicious.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">exercise01$ vol -f xp-infected.vmem pstree
+</code></pre></div><p>however suggests that <code>WORDPAD.EXE</code> doesn&rsquo;t have any parent (the parent process
+has either terminated or something else has happened), so we have no idea
+how it was started.</p>
+<pre><code> 0x82088a78:WORDPAD.EXE                               320   1204      2     98 2011-04-10 21:08:40 UTC+0000
+...
+. 0x820d3c10:cmd.exe                                  972   1956      1     33 2011-04-10 21:28:24 UTC+0000
+.. 0x81f6d228:win32dd.exe                            1120    972      1     22 2011-04-10 21:29:24 UTC+0000
+</code></pre><p>Also, <code>pstree</code> command visualized that <code>win32dd.exe</code> was executed from <code>cmd.exe</code>,
+which could be important.</p>
+<h3 id="brief-processes-summary">Brief Processes Summary</h3>
+<p>We have identified a few possibly suspicious processes so far:</p>
+<table>
+<thead>
+<tr>
+<th>Process Name</th>
+<th align="right">ProcessID</th>
+<th align="right">ParentProcessID</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>WORDPAD.EXE</code></td>
+<td align="right"><code>320</code></td>
+<td align="right"><code>1204</code></td>
+<td>Word-like editor</td>
+</tr>
+<tr>
+<td><code>cmd.exe</code></td>
+<td align="right"><code>972</code></td>
+<td align="right"><code>1956</code></td>
+<td>command-line</td>
+</tr>
+<tr>
+<td><code>win32.dd</code></td>
+<td align="right"><code>1120</code></td>
+<td align="right"><code>972</code></td>
+<td>to-be-analyzed</td>
+</tr>
+<tr>
+<td>&lt;unknown&gt;</td>
+<td align="right"><code>1204</code></td>
+<td align="right">n/a</td>
+<td>unknown parent process</td>
+</tr>
+</tbody>
+</table>
+<h2 id="network-communication">Network Communication</h2>
+<p>Before we proceed further with the process analysis, we could collect some
+additional evidence from the system. One very common source of information
+about malware, botnets, etc., could be acquired from network communication.</p>
+<blockquote>
+<p><strong>INFO:</strong> Network plugin names differ, based on the original
+operating system. For Windows XP images, you can use <code>connections</code>,
+<code>connscan</code>, <code>sockets</code> and <code>sockscan</code> commands.</p>
+</blockquote>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">exercise01$ vol -f xp-infected.vmem connections
+</code></pre></div><p>returns an empty set of connections, which means that there were no active
+connections registered by kernel when the memory image was acquired.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">exercise01$ vol -f xp-infected.vmem connscan
+</code></pre></div><p><code>connscan</code> command, however, reveals some useful hints as to what was happening
+in the system in the (recent) past:</p>
+<pre><code>Offset(P)  Local Address             Remote Address            Pid
+---------- ------------------------- ------------------------- ---
+0x02350cd8 192.168.1.32:1044         91.199.75.77:80           1204
+0x024b8838 192.168.1.32:1047         192.168.1.150:139         4
+</code></pre><p>First, we can see our mysterious unknown process with PID <code>1204</code> communicating
+with <code>91.199.75.77</code> over HTTP port. Second, a system call over Windows SMB port,
+which is most likely legit.</p>
+<p>We can also investigate ports that were being handled by some of the running
+processes. For that reason, <code>sockets</code> or <code>sockscan</code> commands could be used:</p>
+<pre><code>vol -f xp-infected.vmem sockets
+</code></pre><p>From the whole listing, we can note down the following line:</p>
+<pre><code>Offset(V)       PID   Port  Proto Protocol        Address         Create Time
+---------- -------- ------ ------ --------------- --------------- -----------
+0x8214a620     1056   1031     17 UDP             0.0.0.0         2011-04-10 21:08:37 UTC+0000
+</code></pre><p>informing us that a process <code>1056</code> (<code>svchost.exe</code>) has been listening on port
+<code>1031/udp</code>.</p>
+<h3 id="whois-lookup">WHOIS Lookup</h3>
+<p>Let&rsquo;s check whether the WHOIS lookup reveals anything. However, we need to
+take the information with a grain of salt — the image was taken in 2011,
+the incident is now 9 years old, the information about network assignments
+can change. Last but not least, botnets and malware can re-use networks and
+computers that were infected in the past.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">organisation:   ORG-HLGH1-RIPE
+org-name:       Hessische Landesbahn GmbH
+org-type:       OTHER
+address:        DE <span style="color:#ae81ff">60325</span> Frankfurt am Main Am Erlenstrasse <span style="color:#ae81ff">2</span>
+abuse-c:        AR26935-RIPE
+mnt-ref:        ARCOR-MNT
+mnt-by:         ARCOR-MNT
+mnt-by:         HLB-00
+created:        2011-02-17T09:36:45Z
+last-modified:  2020-03-05T07:50:41Z
+source:         RIPE <span style="color:#75715e"># Filtered</span>
+</code></pre></div><h3 id="dns-cache">DNS Cache</h3>
+<p>If we are lucky enough, the IP used by the malware was a result of a DNS
+resolution process; that&rsquo;d allow us to search for the actual domain used
+in the network communication and prepare better signatures (or network
+protections).</p>
+<p>The DNS cache is just another structure in OS memory, thus we could search for
+it. <code>volatility</code> doesn&rsquo;t provide the DNS cache search functionality by default,
+but the setup we have in VM now does (I used the
+<a href="https://github.com/mnemonic-no/dnscache">dnscache plugin</a>, fixed some of the issues I found, and made
+it available as a part of the VM now).</p>
+<p>So, let&rsquo;s give it a try!</p>
+<blockquote>
+<p><strong>INFO:</strong> The plugin requires a folder for some temporary
+downloads, so we need to create it first, and pass the path to the plugin.</p>
+</blockquote>
+<pre><code>exercise01$ mkdir dnsdump
+exercise01$ vol -f xp-infected.vmem dnscache --dump_dir dnsdump/
+</code></pre><p>It&rsquo;ll take a moment and we&rsquo;ll learn some extra piece of info about the image!</p>
+<pre><code>Offset             Name                                                                  TTL Type   Value
+------------------ ---------------------------------------------------------------- -------- ------ -----
+
+0x0000000000742278 mialepromo.ru                                                             HASH   0xb2158
+0x00000000000b2158 mialepromo.ru                                                       14538 A      91.199.75.77
+0x00000000000b27c0                                                                     14538 A      91.199.75.14
+-------------------------
+PID: 1056, DLL: c:\windows\system32\dnsrslvr.dll
+</code></pre><p>What&rsquo;s the new info? We found a domain the malware was trying to communicate
+with &mdash; <code>mialepromo.ru</code>. Also, we identified another IP that could potentially
+be used for the network traffic &mdash; <code>91.199.75.14</code>. Cool stuff!</p>
+<h3 id="brief-network-summary">Brief Network Summary</h3>
+<table>
+<thead>
+<tr>
+<th>Process Name</th>
+<th align="right">ProcessID</th>
+<th align="right">Details</th>
+<th>Comment</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>&lt;unknown&gt;</td>
+<td align="right"><code>1204</code></td>
+<td align="right"><code>91.199.75.77:80</code></td>
+<td>unknown parent process, most likely downloading stuff from Internet</td>
+</tr>
+<tr>
+<td><code>svchost.exe</code></td>
+<td align="right"><code>1056</code></td>
+<td align="right"><code>1031/udp</code></td>
+<td>a (system?) service listening on an UDP port</td>
+</tr>
+<tr>
+<td><code>svchost.exe</code></td>
+<td align="right"><code>1056</code></td>
+<td align="right"><code>mialepromo.ru</code> + <code>91.199.75.14</code></td>
+<td>This process tried to resolve some unexpected, potentially malicious DNS domains, and it resolved an alternate IP for the domain.</td>
+</tr>
+</tbody>
+</table>
+<p>We can probably start constructing a preliminary hypothesis:</p>
+<blockquote>
+<p>A process <code>1204</code> communicated with the Internet, downloaded something (most
+likely a .DOC or .RTF document among other things) and started the
+<code>wordpad.exe</code> process. It&rsquo;s possible that it started another service
+listening on <code>1031/udp</code> port. Also, the newly started service may have been
+actively participating in the communication with a suspicious domain,
+<code>mialepromo.ru</code>.</p>
+</blockquote>
+<h2 id="files-analysis">Files Analysis</h2>
+<blockquote>
+<p><strong>TO-BE-IMPROVED</strong></p>
+</blockquote>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">exercise01$ vol -f xp-infected.vmem dumpfiles -D dump -Q 0x00000000024a5840
+
+DataSectionObject 0x024a5840   None   <span style="color:#ae81ff">\D</span>evice<span style="color:#ae81ff">\H</span>arddiskVolume1<span style="color:#ae81ff">\D</span>OCUME~1<span style="color:#ae81ff">\u</span>nclebob<span style="color:#ae81ff">\D</span>esktop<span style="color:#ae81ff">\d</span>ocument.doc
+</code></pre></div><h2 id="forensic-analysis">Forensic Analysis</h2>
+<h3 id="prefetch-files">Prefetch Files</h3>
+<p>Analysts familiar with Windows XP internals know that there&rsquo;s a mechanism
+built in Windows XP to speed up loading of executables. It&rsquo;s called <em>&ldquo;prefetch&rdquo;</em>
+and good thing about it is that it can help with discovery of processes executed
+in the past, with some extra details.</p>
+<p>The Volatility plugin we are about to use is another &ldquo;extra&rdquo; plugin, not available
+in the default Volatility distro. It can be found at <a href="https://github.com/superponible/volatility-plugins">github repository</a>.
+Good news is that it doesn&rsquo;t require any fixing or updates :)</p>
+<pre><code>exercise01$ vol -f xp-infected.vmem prefetchparser
+</code></pre><p>will provide us with some super-useful extra information &ndash; we&rsquo;ve found a new
+unexpected executable name!</p>
+<pre><code>Prefetch File                              Execution Time               Times Size
+------------------------------------------ ---------------------------- ----- --------
+POST_EXPRESS_LABEL.EXE-1FE60565.pf         2011-04-10 21:08:32 UTC+0000     1    17530
+</code></pre><h3 id="strings-analysis">Strings Analysis</h3>
+<p>TBD</p>
+<h2 id="final-hypothesis">Final Hypothesis</h2>
+<p>TBD.</p>
+<h3 id="timeline">Timeline</h3>
+<p>Fortunately we have a few timestamps collected during the analysis process.</p>
+<table>
+<thead>
+<tr>
+<th>Timestamp (UTC)</th>
+<th>Information</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>2011-04-10 21:08:32</code></td>
+<td>Prefetch record for <code>Post_Express_Label.exe</code> was created.</td>
+</tr>
+<tr>
+<td><code>2011-04-10 21:08:37</code></td>
+<td><code>svchost.exe (1056)</code> started listening on a UDP port.</td>
+</tr>
+<tr>
+<td><code>2011-04-10 21:08:40</code></td>
+<td><code>wordpad.exe (320)</code> process was started.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="indicators">Indicators</h3>
+<table>
+<thead>
+<tr>
+<th>IndicatorType</th>
+<th>Value</th>
+<th>Comment</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>ip-address</code></td>
+<td><code>91.199.75.77</code></td>
+<td>Used for downloading of various stages of the malware.</td>
+</tr>
+<tr>
+<td><code>ip-address</code></td>
+<td><code>91.199.75.14</code></td>
+<td>Not used directly, but it&rsquo;s an alternate IP of a malicious domain below.</td>
+</tr>
+<tr>
+<td><code>domain</code></td>
+<td><code>mialepromo.ru</code></td>
+<td>DNS name most likely bound to the address above, used for downloading of various stages of the malware.</td>
+</tr>
+<tr>
+<td><code>user-agent</code></td>
+<td><code>Our_Agent</code></td>
+<td>user-agent identification used for the malware downloads.</td>
+</tr>
+<tr>
+<td><code>filename</code></td>
+<td><code>Post_Express_Label.exe</code></td>
+<td>Filename of the original malware file.</td>
+</tr>
+<tr>
+<td><code>md5</code></td>
+<td><code>dae329b01159385eef29f6d1416f2f27</code></td>
+<td>A document dropped by the malware.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="signatures">Signatures</h3>
+<h4 id="yara-signatures">Yara Signatures</h4>
+<p>For any kind of future incidents, we prepared the following Yara signatures:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml">rule pv204_suspicious_domain {
+  <span style="color:#66d9ef">meta</span>:
+    description =  <span style="color:#e6db74">&#34;Detects our very suspicious domain&#34;</span>
+    author = <span style="color:#e6db74">&#34;Vasek Lorenc&#34;</span>
+    date = <span style="color:#e6db74">&#34;2020-04-29&#34;</span>
+  <span style="color:#66d9ef">strings</span>:
+    $env1 = /mialepromo.ru/
+  <span style="color:#66d9ef">condition</span>:
+    any of them
+}
+
+rule pv204_suspicious_agent {
+  <span style="color:#66d9ef">meta</span>:
+    description =  <span style="color:#e6db74">&#34;Detects our very suspicious agent&#34;</span>
+    author = <span style="color:#e6db74">&#34;Vasek Lorenc&#34;</span>
+    date = <span style="color:#e6db74">&#34;2020-04-29&#34;</span>
+  <span style="color:#66d9ef">strings</span>:
+    $env1 = /Our_Agent/
+  <span style="color:#66d9ef">condition</span>:
+    any of them
+}
+</code></pre></div><h4 id="suricata-signatures">Suricata Signatures</h4>
+<p>Signatures for the possible DNS communication (malicious domains resolution),
+plus signatures for the HTTP scheme.</p>
+<blockquote>
+<p>The latter won&rsquo;t be useful much these days, as majority of HTTP traffic is
+actually HTTPS, encrypted. Even malware and botnets are now switching to
+HTTPS, as it allows them to stay hidden from the plain sight.</p>
+</blockquote>
+<h1 id="further-reading">Further Reading</h1>
+</article>
+ 
+      
+
+      <footer class="book-footer">
+        
+  <div class="flex justify-between">
+
+
+
+
+
+</div>
+
+ 
+        
+      </footer>
+
+      
+  
+ 
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
+    <aside class="book-toc">
+      
+  <nav id="TableOfContents">
+  <ul>
+    <li><a href="#sample-preparation">Sample Preparation</a></li>
+    <li><a href="#image-identification">Image Identification</a>
+      <ul>
+        <li><a href="#image-summary">Image Summary</a></li>
+      </ul>
+    </li>
+    <li><a href="#processes">Processes</a>
+      <ul>
+        <li><a href="#brief-processes-summary">Brief Processes Summary</a></li>
+      </ul>
+    </li>
+    <li><a href="#network-communication">Network Communication</a>
+      <ul>
+        <li><a href="#whois-lookup">WHOIS Lookup</a></li>
+        <li><a href="#dns-cache">DNS Cache</a></li>
+        <li><a href="#brief-network-summary">Brief Network Summary</a></li>
+      </ul>
+    </li>
+    <li><a href="#files-analysis">Files Analysis</a></li>
+    <li><a href="#forensic-analysis">Forensic Analysis</a>
+      <ul>
+        <li><a href="#prefetch-files">Prefetch Files</a></li>
+        <li><a href="#strings-analysis">Strings Analysis</a></li>
+      </ul>
+    </li>
+    <li><a href="#final-hypothesis">Final Hypothesis</a>
+      <ul>
+        <li><a href="#timeline">Timeline</a></li>
+        <li><a href="#indicators">Indicators</a></li>
+        <li><a href="#signatures">Signatures</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+ 
+    </aside>
+    
+  </main>
+
+  
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+

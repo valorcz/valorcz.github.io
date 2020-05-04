@@ -30,13 +30,23 @@
     
     <item>
       <title></title>
-      <link>https://valorcz.github.io/docs/teaching/memory-analysis/</link>
+      <link>https://valorcz.github.io/docs/teaching/memory-analysis/materials/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://valorcz.github.io/docs/teaching/memory-analysis/</guid>
+      <guid>https://valorcz.github.io/docs/teaching/memory-analysis/materials/</guid>
       <description>In-Memory Malware Analysis This page contains some information and links for In-Memory Malware Analysis course.
 In case of any questions, don&amp;rsquo;t hesitate to contact me at vaclav.lorenc-at-gmail.com or @valorcz on Twitter.
 Course Texts  In-Memory Analysis (text) &amp;mdash; A brief introduction to reverse engineering and memory forensics (English). In-Memory Analysis (slides) &amp;mdash; Handouts for this course (English).  Tools and Templates  In-Memory Analysis (tools) &amp;mdash; A bootstrap folder structure with Volatility Framework and other tools.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://valorcz.github.io/docs/teaching/memory-analysis/sample-report/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://valorcz.github.io/docs/teaching/memory-analysis/sample-report/</guid>
+      <description>PV204: Sample Analysis Report This is a sample report describing analysis of xp-infected.vmem memory image (i.e. exercise01). We&amp;rsquo;ll demonstrate both the structure of the report and one of the possible analysis workflows you could use for your own research/work.
+Sample Preparation Before we start with the analysis, we need to download the memory image. That can be done via exercise 1 command issued on the VM command line (see the official course documentation for more details).</description>
     </item>
     
     <item>

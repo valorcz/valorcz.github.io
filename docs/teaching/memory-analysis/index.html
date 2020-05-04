@@ -4,19 +4,16 @@
 <head>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="In-Memory Malware Analysis This page contains some information and links for In-Memory Malware Analysis course.
-In case of any questions, don&rsquo;t hesitate to contact me at vaclav.lorenc-at-gmail.com or @valorcz on Twitter.
-Course Texts  In-Memory Analysis (text) &mdash; A brief introduction to reverse engineering and memory forensics (English). In-Memory Analysis (slides) &mdash; Handouts for this course (English).  Tools and Templates  In-Memory Analysis (tools) &mdash; A bootstrap folder structure with Volatility Framework and other tools."><meta property="og:title" content="" />
-<meta property="og:description" content="In-Memory Malware Analysis This page contains some information and links for In-Memory Malware Analysis course.
-In case of any questions, don&rsquo;t hesitate to contact me at vaclav.lorenc-at-gmail.com or @valorcz on Twitter.
-Course Texts  In-Memory Analysis (text) &mdash; A brief introduction to reverse engineering and memory forensics (English). In-Memory Analysis (slides) &mdash; Handouts for this course (English).  Tools and Templates  In-Memory Analysis (tools) &mdash; A bootstrap folder structure with Volatility Framework and other tools." />
-<meta property="og:type" content="article" />
+<meta name="description" content=""><meta property="og:title" content="" />
+<meta property="og:description" content="" />
+<meta property="og:type" content="website" />
 <meta property="og:url" content="https://valorcz.github.io/docs/teaching/memory-analysis/" />
 
 <title>Memory Analysis | Unsorted Stuff</title>
 <link rel="icon" href="/favicon.png" type="image/x-icon">
-<link rel="stylesheet" href="/book.min.d2f9c90a63827e536eebd87a9319796e5963a01a276775659c50295dff85bed4.css" integrity="sha256-0vnJCmOCflNu69h6kxl5blljoBonZ3VlnFApXf&#43;FvtQ=">
-<script defer src="/en.search.min.2e9c1893976f50a8d5d0db3d8bf82658f944b4b48b1ba724b359524fc234324f.js" integrity="sha256-LpwYk5dvUKjV0Ns9i/gmWPlEtLSLG6cks1lST8I0Mk8="></script>
+<link rel="stylesheet" href="/book.min.be9c64dfc170c5ab2d6e37cc61c7c7f89d76767b67d3e59763a40b1f21bdc530.css" integrity="sha256-vpxk38FwxastbjfMYcfH&#43;J12dntn0&#43;WXY6QLHyG9xTA=">
+<script defer src="/en.search.min.cc14dcd3d512f034b7bd9f8af51386375275a8bc2b5dc4743eef14b76ec0b72a.js" integrity="sha256-zBTc09US8DS3vZ&#43;K9ROGN1J1qLwrXcR0Pu8Ut27Atyo="></script>
+<link rel="alternate" type="application/rss+xml" href="https://valorcz.github.io/docs/teaching/memory-analysis/index.xml" title="Unsorted Stuff" />
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
@@ -188,7 +185,38 @@ https://github.com/alex-shpak/hugo-book
         <li>
           
   
-    <a href="/docs/teaching/memory-analysis/" class="active">Memory Analysis</a>
+    <span>Memory Analysis</span>
+  
+
+          
+  
+  
+  
+
+  
+  <ul>
+    
+      
+        <li>
+          
+  
+    <a href="/docs/teaching/memory-analysis/materials/" class="">Materials</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+    <a href="/docs/teaching/memory-analysis/sample-report/" class="">Sample Report</a>
+  
+
+        </li>
+      
+    
+  </ul>
   
 
         </li>
@@ -260,15 +288,7 @@ https://github.com/alex-shpak/hugo-book
     <input type="checkbox" class="hidden" id="toc-control" />
     <aside class="hidden clearfix">
       
-  <nav id="TableOfContents">
-  <ul>
-    <li><a href="#course-texts">Course Texts</a></li>
-    <li><a href="#tools-and-templates">Tools and Templates</a></li>
-    <li><a href="#memory-images">Memory Images</a></li>
-    <li><a href="#links">Links</a></li>
-    <li><a href="#homework">Homework</a></li>
-  </ul>
-</nav>
+  <nav id="TableOfContents"></nav>
 
 
     </aside>
@@ -278,124 +298,7 @@ https://github.com/alex-shpak/hugo-book
 
       
       
-  <article class="markdown"><h1 id="in-memory-malware-analysis">In-Memory Malware Analysis</h1>
-<p>This page contains some information and links for In-Memory Malware Analysis course.</p>
-<p>In case of any questions, don&rsquo;t hesitate to contact me at
-<strong><code>vaclav.lorenc-at-gmail.com</code></strong> or <a href="https://twitter.com/valorcz"><strong><code>@valorcz</code></strong></a> on Twitter.</p>
-<h2 id="course-texts">Course Texts</h2>
-<ul>
-<li><a href="https://dior.ics.muni.cz/~valor/pv204/files/in-memory-analysis-text.pdf">In-Memory Analysis (text)</a>
-&mdash; A brief introduction to reverse engineering and memory forensics (English).</li>
-<li><a href="https://dior.ics.muni.cz/~valor/pv204/files/in-memory-analysis-slides.pdf">In-Memory Analysis (slides)</a>
-&mdash; Handouts for this course (English).</li>
-</ul>
-<h2 id="tools-and-templates">Tools and Templates</h2>
-<ul>
-<li><a href="https://dior.ics.muni.cz/~valor/pv204/files/in-memory-analysis-2018.zip">In-Memory Analysis (tools)</a>
-&mdash; A bootstrap folder structure with Volatility Framework and other tools.
-Unzip the file (if you know how, edit your <code>%PATH%</code> variable to contain the
-<code>\bin</code> folder).</li>
-</ul>
-<h2 id="memory-images">Memory Images</h2>
-<p>Most of the memory images here can be found and downloaded from
-<a href="https://code.google.com/p/volatility/wiki/SampleMemoryImages">Volatility Framework</a> page.
-Download the file into your <code>\images</code> folder (it&rsquo;s in the unzipped folder
-structure from the previous step).</p>
-<table>
-<thead>
-<tr>
-<th>URL</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><a href="https://dior.ics.muni.cz/~valor/pv204/images/xp-infected.vmem">Infected WinXP</a></td>
-<td>A very basic Windows XP system, easy to analyze.</td>
-</tr>
-<tr>
-<td><a href="https://dior.ics.muni.cz/~valor/pv204/images/win7_x64.vmem.bz2">Clean Win7, x64</a></td>
-<td>A clean image of Win7 Home memory, x64 platform (packed with bzip2).</td>
-</tr>
-<tr>
-<td><a href="https://dior.ics.muni.cz/~valor/pv204/images/zeus.vmem">Zeus (older version)</a></td>
-<td>Windows XP infected with Zeus.</td>
-</tr>
-<tr>
-<td><a href="https://dior.ics.muni.cz/~valor/pv204/images/zeus2x4.vmem">Zeus (newer version)</a></td>
-<td>Windows XP infected with never version of Zeus.</td>
-</tr>
-<tr>
-<td><a href="https://dior.ics.muni.cz/~valor/pv204/images/cridex.vmem">Cridex (trojan, backdoor)</a></td>
-<td>A host infected with Cridex.</td>
-</tr>
-<tr>
-<td><a href="https://dior.ics.muni.cz/~valor/pv204/images/spyeye.vmem">SpyEye (keylogger)</a></td>
-<td>A host infected with SpyEye.</td>
-</tr>
-<tr>
-<td><a href="https://dior.ics.muni.cz/~valor/pv204/images/darkcomet-sample.zip">DarkComet (keylogger)</a></td>
-<td>A memory image of a host infected with DarkComet. Due to its size, this memory image si zipped.</td>
-</tr>
-<tr>
-<td><a href="https://dior.ics.muni.cz/~valor/pv204/images/exemplar17_1.vmem">IE history analysis</a></td>
-<td>A memory image with a browser history to be analyzed.</td>
-</tr>
-<tr>
-<td><a href="https://dior.ics.muni.cz/~valor/pv204/images/bob.vmem">Bob! Detailed Forensics</a></td>
-<td>Memory image to test your forensic skills (<code>foremost</code> can help you, be careful with dumped files).</td>
-</tr>
-</tbody>
-</table>
-<h2 id="links">Links</h2>
-<table>
-<thead>
-<tr>
-<th>URL</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><a href="http://www.volatilityfoundation.org/">Volatily Framework</a></td>
-<td>Powerful open source tool for memory analysis with command-line interface. Python powered.</td>
-</tr>
-<tr>
-<td><a href="http://www.rekall-forensic.com/">Rekall Memory Forensic Framework</a></td>
-<td>Completely open collection of tools for the collection and extraction of digital artifacts from memory. Python powered.</td>
-</tr>
-<tr>
-<td><a href="https://www.fireeye.com/services/freeware/redline.html">FireEye Redline</a></td>
-<td>Free (not open source) memory forensic tool, with nice GUI and decent forensic capabilities. For Windows only, requires latest .NET Framework.</td>
-</tr>
-<tr>
-<td><a href="http://beginners.re/">Reverse Engineering for Beginners</a></td>
-<td>Excellent and free material for everyone who wants to dive into reverse engineering. Incredible stuff!</td>
-</tr>
-<tr>
-<td><a href="http://digital-forensics.sans.org/media/Poster-2015-Memory-Forensics.pdf">SANS DFIR Memory Forensics Poster</a></td>
-<td>A poster with overview of memory forensics tools, workflows, commands and internals.</td>
-</tr>
-<tr>
-<td><a href="https://developer.microsoft.com/en-us/microsoft-edge/tools/vms/mac/">Windows VMs</a></td>
-<td>When you need a fully functional Windows VM with a browser (IE or Edge).</td>
-</tr>
-</tbody>
-</table>
-<h2 id="homework">Homework</h2>
-<p>Your homework is as easy as forensic analysis. Ok, way easier :)</p>
-<blockquote class="book-hint danger">
-  Analyse the image below, write a report and summarize your findings in such a way that I can possibly reproduce the process of your analysis. Use all the tools we used in the class, but only if you can work in a <strong>safe environment</strong> (VMWare, VirtualBox or Unix-based OS). If not, you don&rsquo;t have to dump any files from the memory image, especially if you don&rsquo;t trust your AV. Stay safe and keep your computer clean. If you want to perform more detailed analysis, you are cordially invited.
-</blockquote>
-
-<p>You are expected to write a report with your analysis &ndash; what volatility commands you used, what was the result, what did you find interesting and important. Preferebly, if you can put together a full story of what happened, that could bring you some extra points.</p>
-<p>In case you need an inspiration in the report writing,
-here&rsquo;s one: <a href="https://dior.ics.muni.cz/~valor/pv204/bob-vmem-analysis.pdf">a sample report</a>. Your report doesn&rsquo;t have to be that detailed, yet try to be as descriptive as possible.</p>
-<ul>
-<li><a href="https://dior.ics.muni.cz/~valor/pv204/images/homework-2019.vmem.bz2">Your Homework</a> &mdash; Memory image to test your skills (big warning here &ndash;be careful with dumped files!).</li>
-</ul>
-<p>Material prepared and created for <strong>Laboratory of Applied Security and Cryptography</strong></p>
-</article>
+  <article class="markdown"></article>
  
       
 
@@ -423,15 +326,7 @@ here&rsquo;s one: <a href="https://dior.ics.muni.cz/~valor/pv204/bob-vmem-analys
     
     <aside class="book-toc">
       
-  <nav id="TableOfContents">
-  <ul>
-    <li><a href="#course-texts">Course Texts</a></li>
-    <li><a href="#tools-and-templates">Tools and Templates</a></li>
-    <li><a href="#memory-images">Memory Images</a></li>
-    <li><a href="#links">Links</a></li>
-    <li><a href="#homework">Homework</a></li>
-  </ul>
-</nav>
+  <nav id="TableOfContents"></nav>
 
  
     </aside>
